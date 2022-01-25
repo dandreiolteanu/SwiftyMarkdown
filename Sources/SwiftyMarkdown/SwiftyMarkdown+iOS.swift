@@ -121,7 +121,7 @@ extension SwiftyMarkdown {
 			
 			if let customFont = UIFont(name: existentFontName, size: finalSize)  {
 				let fontMetrics = UIFontMetrics(forTextStyle: textStyle)
-				font = fontMetrics.scaledFont(for: customFont)
+                font = fontMetrics.scaledFont(for: customFont, compatibleWith: UITraitCollection(preferredContentSizeCategory: .large))
 			} else {
 				font = UIFont.preferredFont(forTextStyle: textStyle)
 			}
